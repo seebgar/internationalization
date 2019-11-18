@@ -7,12 +7,12 @@ import JobsList from "./components/jobsList";
 
 const cache = createIntlCache()
 
-/* const locale = (navigator.languages && navigator.languages[0])
+const locale = (navigator.languages && navigator.languages[0])
                || navigator.language
                || navigator.userLanguage
-               || 'es-ES'; */
+               || 'en-US'; 
 
-const locale = "en-US";
+//const locale = "es-ES";
 
 ReactDOM.render(
 	<IntlProvider locale={locale} key={locale} value={cache} messages={txt[locale]}>

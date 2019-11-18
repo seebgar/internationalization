@@ -13,7 +13,7 @@ class JobsList extends React.Component {
       offers: [
         {
           id: "0001",
-          name: "Manager",
+          name: props.intl.locale === "es-ES" ? "Gerente" : "Manager",
           company: "Schneider Electric",
           salary: 4.5,
           city: "Bogotá, Colombia",
@@ -22,7 +22,7 @@ class JobsList extends React.Component {
         },
         {
           id: "0002",
-          name: "Software Engineer",
+          name: props.intl.locale === "es-ES" ? "Ingeniero de Software" : "Software Engineer",
           company: "Google Inc.",
           salary: 20,
           city: "Palo Alto, CA, USA",
@@ -31,8 +31,8 @@ class JobsList extends React.Component {
         },
         {
           id: "0003",
-          name: "Nurse",
-          company: "Clínica La Aurora",
+          name: props.intl.locale === "es-ES" ? "Enfermera" : "Nurse",
+          company: props.intl.locale === "es-ES" ? "Clínica La Aurora" : "La Aurora Clinic",
           salary: 1,
           city: "Cali, Colombia",
           date: "2019-03-28",
