@@ -1,6 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { IntlProvider, createIntlCache } from 'react-intl';
+import txt from './locales/txt'
 
 import JobsList from "./components/jobsList";
 
-ReactDOM.render(<JobsList/>, document.getElementById("root"));
+const cache = createIntlCache()
+
+/* const locale = (navigator.languages && navigator.languages[0])
+               || navigator.language
+               || navigator.userLanguage
+               || 'es-ES'; */
+
+const locale = "en-US";
+
+ReactDOM.render(
+	<IntlProvider locale={locale} key={locale} value={cache} messages={txt[locale]}>
+		<JobsList/>
+	</IntlProvider>, document.getElementById("root")
+);
